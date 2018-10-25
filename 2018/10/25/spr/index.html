@@ -3,16 +3,19 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>搭建hexo那些年遇到的坑 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+  <meta name="description" content="前言相信很多人在搭建hexo的过程中，总是会遇到一些匪夷所思，令人头疼的问题。每次当你信心满满的 将代码代码敲好，然后一个帅气的回车，error，error，error，error，还是error，嗯，相信你这时 候已经默默的打开百度，谷歌 “hexo安装过程中报错怎么办”  =-=，所以，本文就搭建hexo过程中能出 现的问题进行讲解。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建hexo那些年遇到的坑">
 <meta property="og:url" content="http://yoursite.com/2018/10/25/spr/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前言相信很多人在搭建hexo的过程中，总是会遇到一些匪夷所思，令人头疼的问题。每次当你信心满满的 将代码代码敲好，然后一个帅气的回车，error，error，error，error，还是error，嗯，相信你这时 候已经默默的打开百度，谷歌 “hexo安装过程中报错怎么办”  =-=，所以，本文就搭建hexo过程中能出 现的问题进行讲解。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-25T13:06:23.440Z">
+<meta property="og:updated_time" content="2018-10-25T13:06:23.448Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="搭建hexo那些年遇到的坑">
+<meta name="twitter:description" content="前言相信很多人在搭建hexo的过程中，总是会遇到一些匪夷所思，令人头疼的问题。每次当你信心满满的 将代码代码敲好，然后一个帅气的回车，error，error，error，error，还是error，嗯，相信你这时 候已经默默的打开百度，谷歌 “hexo安装过程中报错怎么办”  =-=，所以，本文就搭建hexo过程中能出 现的问题进行讲解。">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,20 +67,78 @@
         <section id="main"><article id="post-spr" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/10/25/spr/" class="article-date">
-  <time datetime="2018-10-25T10:47:20.339Z" itemprop="datePublished">2018-10-25</time>
+  <time datetime="2018-10-25T10:47:20.000Z" itemprop="datePublished">2018-10-25</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      搭建hexo那些年遇到的坑
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>相信很多人在搭建hexo的过程中，总是会遇到一些匪夷所思，令人头疼的问题。每次当你信心满满的</p>
+<p>将代码代码敲好，然后一个帅气的回车，<strong><em>error</em></strong>，<strong><em>error</em></strong>，<strong><em>error</em></strong>，<strong><em>error</em></strong>，还是<strong><em>error</em></strong>，嗯，相信你这时</p>
+<p>候已经默默的打开百度，谷歌 “hexo安装过程中报错怎么办”  =-=，所以，本文就搭建hexo过程中能出</p>
+<p>现的问题进行讲解。</p>
+<a id="more"></a>
+<ul>
+<li>github仓库名错误</li>
+</ul>
+<p>仓库的名字的正确格式是<code>github用户名.github.io</code>,之前没仔细看，输错一个字符，报错</p>
+<ul>
+<li><p>输入 <code>hexo g</code> <code>hexo d</code> 出现 <code>node: command not found</code></p>
+<p>多半是环境变量没有设置好，在命令行输入 <code>set path=你文件的安装目录</code>  （只要出现command not found，大</p>
+</li>
+</ul>
+<p>部分都为环境变量的问题，对应添加就行）</p>
+<ul>
+<li><p><code>npm install -g hexo-cli</code>之后报错一大堆，也看不懂。</p>
+<p>看到permission denied，猜测可能又是权限问题？最后看到<code>Please try running this command again as</code></p>
+</li>
+</ul>
+<p><code>root/Administrator.</code>……开了管理员权限，搞定。 </p>
+<ul>
+<li>ssh秘钥已添加，但没有权限提交</li>
+</ul>
+<p>​    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Error: Host key verification failed.</span><br><span class="line">fatal: Could not read from remote repository.</span><br><span class="line">...</span><br><span class="line">FATAL Host key verification failed.</span><br><span class="line">fatal: Could not read from remote repository.</span><br></pre></td></tr></table></figure>
+<p>  新增个人公钥可解决这个问题</p>
+<p>  <code>ssh-keygen -t rsa -C &quot;你的邮箱&quot;</code> 生成sshkey，输入代码之后一顿回车就行。然后找到生成的sshkey， </p>
+<p><code>cat ~/.ssh/id_rsa.pub</code>  将其添加到你的github库中密钥即可。再输入 <code>ssh -T git@github.com</code> 进行验证</p>
+<p>是否成功。</p>
+<ul>
+<li>在把博客内容部署到GitHub上的时候，执行hexo deploy没反应</li>
+</ul>
+<ul>
+<li><p>config.yml文件中的deploy的type：repo：branch：冒号后面都得加空格   </p>
+</li>
+<li><p>repo后面的地址输入错误 <code>https://github.com/YourgithubName/YourgithubName.github.io.git</code>或者 <a href="mailto:`git@github.com" target="_blank" rel="noopener">`git@github.com</a>:YourgithubName/YourgithubName/.github.io.git` </p>
+</li>
+</ul>
+<ul>
+<li><p><code>hexo d</code> 出现 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">** Please tell me who you are.</span><br><span class="line"></span><br><span class="line">Run</span><br><span class="line"></span><br><span class="line">  git config --global user.email &quot;you@example.com&quot;</span><br><span class="line">  git config --global user.name &quot;Your Name&quot;</span><br><span class="line"></span><br><span class="line">to set your account&apos;s default identity.</span><br><span class="line">Omit --global to set the identity only in this repository.</span><br></pre></td></tr></table></figure>
+<p>用户名与邮箱没有设置好。 输入</p>
+</li>
+</ul>
+<p>  <code>git config --global user.email &quot;你的邮箱&quot;</code></p>
+<p>  <code>git config --global user.name &quot;yourgithubname&quot;</code>  搞定</p>
+<p>​        反正你只需要知道，安装的过程当中肯定是会有很多乱七八糟的错误，这时候你就需要静下心来，打开一瓶82年的可乐，配上千年泡菜，细细品味，一切都会海阔天空的（当然了，学会用好搜索引擎你就已经解决百分之90以上的问题了）</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/25/spr/" data-id="cjnogtuqi0001h4tb14dod4c2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/25/spr/" data-id="cjnolumom0001i4tbq7qx12w4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -126,7 +187,7 @@
       <ul>
         
           <li>
-            <a href="/2018/10/25/spr/">(no title)</a>
+            <a href="/2018/10/25/spr/">搭建hexo那些年遇到的坑</a>
           </li>
         
           <li>
