@@ -5,17 +5,17 @@
   
   <title>搭建hexo那些年遇到的坑 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言相信很多人在搭建hexo的过程中，总是会遇到一些匪夷所思，令人头疼的问题。每次当你信心满满的 将代码代码敲好，然后一个帅气的回车，error，error，error，error，还是error，嗯，相信你这时 候已经默默的打开百度，谷歌 “hexo安装过程中报错怎么办”  =-=，所以，本文就搭建hexo过程中能出 现的问题进行讲解。">
+  <meta name="description" content="前言相信很多人在搭建hexo的过程中，总是会遇到一些匪夷所思，令人头疼的问题。每次当你信心满满的将代码代码敲好，然后一个帅气的回车，error，error，error，error，还是error，嗯，相信你这时候已经默默的打开百度，谷歌 “hexo安装过程中报错怎么办”  =-=，所以，本文就搭建hexo过程中能出现的问题进行讲解。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建hexo那些年遇到的坑">
 <meta property="og:url" content="http://yoursite.com/2018/10/25/spr/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="前言相信很多人在搭建hexo的过程中，总是会遇到一些匪夷所思，令人头疼的问题。每次当你信心满满的 将代码代码敲好，然后一个帅气的回车，error，error，error，error，还是error，嗯，相信你这时 候已经默默的打开百度，谷歌 “hexo安装过程中报错怎么办”  =-=，所以，本文就搭建hexo过程中能出 现的问题进行讲解。">
+<meta property="og:description" content="前言相信很多人在搭建hexo的过程中，总是会遇到一些匪夷所思，令人头疼的问题。每次当你信心满满的将代码代码敲好，然后一个帅气的回车，error，error，error，error，还是error，嗯，相信你这时候已经默默的打开百度，谷歌 “hexo安装过程中报错怎么办”  =-=，所以，本文就搭建hexo过程中能出现的问题进行讲解。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-25T13:06:23.448Z">
+<meta property="og:updated_time" content="2018-10-25T13:21:42.175Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建hexo那些年遇到的坑">
-<meta name="twitter:description" content="前言相信很多人在搭建hexo的过程中，总是会遇到一些匪夷所思，令人头疼的问题。每次当你信心满满的 将代码代码敲好，然后一个帅气的回车，error，error，error，error，还是error，嗯，相信你这时 候已经默默的打开百度，谷歌 “hexo安装过程中报错怎么办”  =-=，所以，本文就搭建hexo过程中能出 现的问题进行讲解。">
+<meta name="twitter:description" content="前言相信很多人在搭建hexo的过程中，总是会遇到一些匪夷所思，令人头疼的问题。每次当你信心满满的将代码代码敲好，然后一个帅气的回车，error，error，error，error，还是error，嗯，相信你这时候已经默默的打开百度，谷歌 “hexo安装过程中报错怎么办”  =-=，所以，本文就搭建hexo过程中能出现的问题进行讲解。">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -86,43 +86,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>相信很多人在搭建hexo的过程中，总是会遇到一些匪夷所思，令人头疼的问题。每次当你信心满满的</p>
-<p>将代码代码敲好，然后一个帅气的回车，<strong><em>error</em></strong>，<strong><em>error</em></strong>，<strong><em>error</em></strong>，<strong><em>error</em></strong>，还是<strong><em>error</em></strong>，嗯，相信你这时</p>
-<p>候已经默默的打开百度，谷歌 “hexo安装过程中报错怎么办”  =-=，所以，本文就搭建hexo过程中能出</p>
-<p>现的问题进行讲解。</p>
+        <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>相信很多人在搭建hexo的过程中，总是会遇到一些匪夷所思，令人头疼的问题。每次当你信心满满的将代码代码敲好，然后一个帅气的回车，<strong><em>error</em></strong>，<strong><em>error</em></strong>，<strong><em>error</em></strong>，<strong><em>error</em></strong>，还是<strong><em>error</em></strong>，嗯，相信你这时候已经默默的打开百度，谷歌 “hexo安装过程中报错怎么办”  =-=，所以，本文就搭建hexo过程中能出现的问题进行讲解。</p>
 <a id="more"></a>
 <ul>
 <li>github仓库名错误</li>
 </ul>
 <p>仓库的名字的正确格式是<code>github用户名.github.io</code>,之前没仔细看，输错一个字符，报错</p>
 <ul>
-<li><p>输入 <code>hexo g</code> <code>hexo d</code> 出现 <code>node: command not found</code></p>
-<p>多半是环境变量没有设置好，在命令行输入 <code>set path=你文件的安装目录</code>  （只要出现command not found，大</p>
-</li>
+<li>输入 <code>hexo g</code> <code>hexo d</code> 出现 <code>node: command not found</code></li>
 </ul>
-<p>部分都为环境变量的问题，对应添加就行）</p>
+<p> 多半是环境变量没有设置好，在命令行输入 <code>set path=你文件的安装目录</code>  （只要出现command not found，大部分都为环境变量的问题，对应添加就行）</p>
 <ul>
-<li><p><code>npm install -g hexo-cli</code>之后报错一大堆，也看不懂。</p>
-<p>看到permission denied，猜测可能又是权限问题？最后看到<code>Please try running this command again as</code></p>
-</li>
+<li><code>npm install -g hexo-cli</code>之后报错一大堆，也看不懂。</li>
 </ul>
+<p> 看到permission denied，猜测可能又是权限问题？最后看到<code>Please try running this command again as</code></p>
 <p><code>root/Administrator.</code>……开了管理员权限，搞定。 </p>
 <ul>
 <li>ssh秘钥已添加，但没有权限提交</li>
 </ul>
 <p>​    </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Error: Host key verification failed.</span><br><span class="line">fatal: Could not read from remote repository.</span><br><span class="line">...</span><br><span class="line">FATAL Host key verification failed.</span><br><span class="line">fatal: Could not read from remote repository.</span><br></pre></td></tr></table></figure>
-<p>  新增个人公钥可解决这个问题</p>
-<p>  <code>ssh-keygen -t rsa -C &quot;你的邮箱&quot;</code> 生成sshkey，输入代码之后一顿回车就行。然后找到生成的sshkey， </p>
-<p><code>cat ~/.ssh/id_rsa.pub</code>  将其添加到你的github库中密钥即可。再输入 <code>ssh -T git@github.com</code> 进行验证</p>
-<p>是否成功。</p>
+<p> 新增个人公钥可解决这个问题</p>
+<p>  <code>ssh-keygen -t rsa -C &quot;你的邮箱&quot;</code> 生成sshkey，输入代码之后一顿回车就行。然后找到生成的sshkey，<code>cat ~/.ssh/id_rsa.pub</code>  将其添加到你的github库中密钥即可。再输入 <code>ssh -T git@github.com</code> 进行验证是否成功。</p>
 <ul>
-<li>在把博客内容部署到GitHub上的时候，执行hexo deploy没反应</li>
+<li><p>在把博客内容部署到GitHub上的时候，执行hexo deploy没反应</p>
+<ul>
+<li>​     config.yml文件中的deploy的type：repo：branch：冒号后面都得加空格  </li>
+<li>​         repo后面的地址输入错误 <code>https://github.com/YourgithubName/YourgithubName.github.io.git</code>或者 <a href="mailto:`git@github.com" target="_blank" rel="noopener">`git@github.com</a>:YourgithubName/YourgithubName/.github.io.git` </li>
 </ul>
-<ul>
-<li><p>config.yml文件中的deploy的type：repo：branch：冒号后面都得加空格   </p>
-</li>
-<li><p>repo后面的地址输入错误 <code>https://github.com/YourgithubName/YourgithubName.github.io.git</code>或者 <a href="mailto:`git@github.com" target="_blank" rel="noopener">`git@github.com</a>:YourgithubName/YourgithubName/.github.io.git` </p>
 </li>
 </ul>
 <ul>
@@ -138,7 +129,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/25/spr/" data-id="cjnolumom0001i4tbq7qx12w4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/25/spr/" data-id="cjnom9zii0001v8tbx9ygwvbe" class="article-share-link">Share</a>
       
       
     </footer>
