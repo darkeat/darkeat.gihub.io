@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>YF（部分）ctf题 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言新的ctf比赛开始了，据大佬说这是娱乐性比赛，适合新手做，所以，就试试喽。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="YF（部分）ctf题">
+<meta property="og:url" content="http://yoursite.com/2018/12/08/yufeng(part)CTF/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前言新的ctf比赛开始了，据大佬说这是娱乐性比赛，适合新手做，所以，就试试喽。">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/12/08/yufeng(part)CTF/Users/user/Desktop/御风ctf/杂项/隐写/QQ截图20181208150738.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/08/yufeng(part)CTF/Users/user/Desktop/御风ctf/杂项/隐写/摩尔.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/12/08/yufeng(part)CTF/Users/user/Desktop/御风ctf/杂项/隐写/QQ截图20181208192044.png">
+<meta property="og:updated_time" content="2021-03-24T05:00:07.899Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="YF（部分）ctf题">
+<meta name="twitter:description" content="前言新的ctf比赛开始了，据大佬说这是娱乐性比赛，适合新手做，所以，就试试喽。">
+<meta name="twitter:image" content="http://yoursite.com/2018/12/08/yufeng(part)CTF/Users/user/Desktop/御风ctf/杂项/隐写/QQ截图20181208150738.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-yufeng(part)CTF" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/08/yufeng(part)CTF/" class="article-date">
+  <time datetime="2018-12-08T13:20:20.000Z" itemprop="datePublished">2018-12-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      YF（部分）ctf题
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>新的ctf比赛开始了，据大佬说这是娱乐性比赛，适合新手做，所以，就试试喽。</p>
+<a id="more"></a>
+<h2 id="杂项题"><a href="#杂项题" class="headerlink" title="杂项题"></a>杂项题</h2><h3 id="1-RSA"><a href="#1-RSA" class="headerlink" title="1.RSA"></a>1.RSA</h3><h4 id="题目：这是一道关于rsa算法的题目，题中给出了p-4733986071546，q-51149154，e-14，要求求出d。"><a href="#题目：这是一道关于rsa算法的题目，题中给出了p-4733986071546，q-51149154，e-14，要求求出d。" class="headerlink" title="题目：这是一道关于rsa算法的题目，题中给出了p=4733986071546，q=51149154，e=14，要求求出d。"></a>题目：这是一道关于rsa算法的题目，题中给出了p=4733986071546，q=51149154，e=14，要求求出d。</h4><h4 id="wirteup"><a href="#wirteup" class="headerlink" title="wirteup:"></a>wirteup:</h4><p>RSA算法是现今使用最广泛的公钥密码算法，也是号称地球上最安全的加密算法。算法实现过程为：随意选择两个大的质数p和q，p不等于q，计算N=pq。根据<strong><a href="https://baike.baidu.com/item/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/1944850?fr=aladdin" target="_blank" rel="noopener">欧拉函数</a></strong>，不大于N且与N互质的整数个数为<strong>(p-1)(q-1</strong>)。选择一个整数e与<strong>(p-1)(q-1</strong>)互质，并且e小于<strong>(p-1)(q-1)</strong>。用以下这个公式计算<strong>d：d× e ≡ 1 (mod (p-1)(q-1))</strong>。其中，<strong>（N,e）</strong>是公钥，<strong>（N,d）</strong>是私钥。</p>
+<p>现在题目已经给出了p，q，e的值，那就很简单了，写出python代码如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#求欧拉函数</span><br><span class="line">def rsa_get_euler(prime1, prime2):</span><br><span class="line">    return (prime1 - 1) * (prime2 - 1)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 求私钥</span><br><span class="line">def rsa_get_key(e, euler):</span><br><span class="line">    k = 1</span><br><span class="line">    while True:</span><br><span class="line">        if (((euler * k) + 1) % e) == 0:</span><br><span class="line">            return (euler * k + 1) // e</span><br><span class="line">        k += 1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">p=4733986071546</span><br><span class="line">q=51149154</span><br><span class="line">e=14</span><br><span class="line"></span><br><span class="line">d = rsa_get_key(e, rsa_get_euler(p, q))</span><br><span class="line">print(d)</span><br></pre></td></tr></table></figure>
+<p>运行即可得出到<strong>flag{86478349240472911209}</strong></p>
+<h3 id="2-隐写"><a href="#2-隐写" class="headerlink" title="2.隐写"></a>2.隐写</h3><h4 id="题目：动次打次动次打次"><a href="#题目：动次打次动次打次" class="headerlink" title="题目：动次打次动次打次"></a>题目：动次打次动次打次</h4><h4 id="wirteup："><a href="#wirteup：" class="headerlink" title="wirteup："></a>wirteup：</h4><p>题目下载下来后是一个压缩包文件，解压后得到了几张图片和一个音频。</p>
+<p><img src="/2018/12/08/yufeng(part)CTF/Users\user\Desktop\御风ctf\杂项\隐写\QQ截图20181208150738.png" alt="QQ截图20181208150738"></p>
+<p>根据前面这几张图片可以猜出为摩尔斯电码，然后去百度搜了一张摩尔斯电码对照表。</p>
+<p><img src="/2018/12/08/yufeng(part)CTF/Users\user\Desktop\御风ctf\杂项\隐写\摩尔.jpg" alt="摩尔"></p>
+<p>前面几张字母表翻译得到<strong>F L A G</strong>,然后接下来就开始解码音频之中的信息，用audacity打开音频进行分析。</p>
+<p><img src="/2018/12/08/yufeng(part)CTF/Users\user\Desktop\御风ctf\杂项\隐写\QQ截图20181208192044.png" alt="QQ截图20181208192044"></p>
+<p>试听了一下，是哔哔哔的声音，摩尔斯码由短促的点信号“·”和保持一定时间的长信号“—”组成。按照摩尔斯继续解码，对照密码表，得到<strong>flag{jygg}</strong>。</p>
+<h3 id="3-A-Fine-Cipher"><a href="#3-A-Fine-Cipher" class="headerlink" title="3.A Fine Cipher"></a>3.A Fine Cipher</h3><h4 id="题目：似乎又是一道解密题。"><a href="#题目：似乎又是一道解密题。" class="headerlink" title="题目：似乎又是一道解密题。"></a>题目：似乎又是一道解密题。</h4><h4 id="writeup："><a href="#writeup：" class="headerlink" title="writeup："></a>writeup：</h4><p>下载题目之后，得到一个.py文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">key = &apos;**********&apos;</span><br><span class="line">flag = &apos;flag&#123;**************&#125;&apos;</span><br><span class="line"></span><br><span class="line">enc = &apos;&apos;</span><br><span class="line">n=251</span><br><span class="line">for ch in flag:</span><br><span class="line">    cc = ord(ch)</span><br><span class="line">    for x, y in zip(key[0:len(key) /2], key[len(key) /2:len(key)]):</span><br><span class="line">        cc = (ord(x) * cc + ord(y)) % n</span><br><span class="line">    enc = enc + &apos;%02x&apos; % cc</span><br><span class="line">print enc</span><br></pre></td></tr></table></figure>
+<p>python3运行之后报错了，<strong>TypeError: slice indices must be integers or None or have an index method</strong>，搜索之后似乎因为是除法问题，在除号那采用地板除法 <strong>“//”</strong>，解决问题。观看代码是一道正常的加密题，然后就开始漫长的反推算法问题，然后越推越绝望，对于ctf渣渣的我，实在是做不出来，后面得到大佬提示这为仿射密码，查资料得到 <strong>仿射密码（Affine Cipher）</strong>,慢着，题目叫啥来着（A Fine Cipher），干（丧）得（心）漂（病）亮（狂），因为这种题目之前没遇到过，所以做起来很吃力，根本无从下手。</p>
+<h5 id="仿射密码"><a href="#仿射密码" class="headerlink" title="仿射密码"></a>仿射密码</h5><p>仿射密码的加密函数是 <strong>E(x)=(ax+b)(modm)</strong>，其中</p>
+<ul>
+<li>x表示明文按照某种编码得到的数字</li>
+<li>a和 m互质</li>
+<li>m是编码系统中字母的数目</li>
+</ul>
+<p>解密函数是 <strong>D(x)=a−1(x−b)(modm)，</strong>其中 a−1 是 a 在 Zm群的乘法逆元。</p>
+<p>解法，一般来说，对于该种密码，我们至少得是在已知部分明文的情况下才可以攻击。下面进行简单的分析。这种密码由两种参数来控制，如果我们知道其中任意一个参数，那我们便可以很容易地快速枚举另外一个参数得到答案。但是，假设我们已经知道采用的字母集，这里假设为 26 个字母，我们还有另外一种解密方式，我们只需要知道两个加密后的字母 <strong>y1,y2y1,y2</strong> 即可进行解密。那么我们还可以知道<strong>y1=(ax1+b)(mod26)</strong>，<strong>y2=(ax2+b)(mod26)</strong>，两式相减，<strong>y1−y2=a(x1−x2)(mod26)</strong>，这里 <strong>y1,y2y1,y2</strong> 已知，如果我们知道密文对应的两个不一样的字符 <strong>x1x1</strong> 与 <strong>x2x2</strong> ，那么我们就可以很容易得到 <strong>aa</strong> ，进而就可以得到 <strong>bb</strong> 了。</p>
+<p>之后参考了大佬的代码，运行解密</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import gmpy2</span><br><span class="line"></span><br><span class="line">key = &apos;**********&apos;</span><br><span class="line">flag = &apos;flag&#123;**************&#125;&apos;</span><br><span class="line"></span><br><span class="line">#这为密文十六进制翻译得到的十进制数组</span><br><span class="line">encrypted =[142,73,74,5,26,77,5,10,209,187,28,50,28,50,232,170,51,10,187,27,233,232,28,232,233,164,50,77,3]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">plaindelta = ord(flag[1]) - ord(flag[0])</span><br><span class="line">cipherdalte = encrypted[1] - encrypted[0]</span><br><span class="line">a = gmpy2.invert(plaindelta, 251) * cipherdalte % 251</span><br><span class="line">b = (encrypted[0] - a * ord(flag[0])) % 251</span><br><span class="line">a_inv = gmpy2.invert(a, 251)</span><br><span class="line">result = &quot;&quot;</span><br><span class="line">for c in encrypted:</span><br><span class="line">    result += chr((c - b) * a_inv % 251)</span><br><span class="line">print (result)</span><br></pre></td></tr></table></figure>
+<p>得到<strong>flag{@g0vmenent-c0mpitetion@}</strong></p>
+<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><p>RSA现在应该是一种比较常见算法了，在很多地方都能用得到，但因为是第一次接触解密类的题目，在刚开始的时候难免会遇到一些莫名奇妙的问题，这类题目需要有一定的代码基础和数学算法基础，要不然，很难受。</p>
+<p>在<strong>wav</strong>音频隐写中，现在比较常见的就应该是</p>
+<ul>
+<li><p>音频中隐写摩斯电码</p>
+<p>这种一般根据它的分析图慢慢记录分析对照就可以得到了。</p>
+</li>
+<li><p>音频中隐写二进制</p>
+<p>这种题目的话将它图形放大，以高的为1.低的为0记录下二进制，然后根据题目需要再进行下一步的转换。</p>
+</li>
+<li><p>音频转换隐写</p>
+<p>打开文件，点击频谱图，你会发现奇迹。</p>
+</li>
+</ul>
+<p>在单表替换加密，所有的加密方式几乎都有一个共性，那就是明密文一一对应。所以说，一般有以下两种方式来进行破解</p>
+<ul>
+<li>在密钥空间较小的情况下，采用暴力破解方式</li>
+<li>在密文长度足够长的时候，使用词频分析</li>
+</ul>
+<p>当密钥空间足够大，而密文长度足够短的情况下，破解较为困难，加密类型通常会有，<strong>凯撒密码，移位密码，atbash cipher，简单替换密码，仿射密码</strong>，这次遇到的就是仿射密码了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/12/08/yufeng(part)CTF/" data-id="ckmn3826v0002yctbxvxofcqv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/03/24/database_summary/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          数据库基础知识回顾
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/10/25/spr/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">搭建hexo那些年遇到的坑</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/基础知识回顾/">基础知识回顾</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/基础知识回顾/" style="font-size: 10px;">基础知识回顾</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/03/24/database_summary/">数据库基础知识回顾</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/08/yufeng(part)CTF/">YF（部分）ctf题</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/25/spr/">搭建hexo那些年遇到的坑</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/25/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
