@@ -13,14 +13,14 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="前言许久没有打开的博客了，最近应该会开始慢慢记录些东西吧，现在是基础知识回顾阶段。知识内容是在CSDN博客上找的，具体是哪儿忘记了。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/.com//20130903203749812.png">
-<meta property="og:image" content="http://yoursite.com/.com//20130903204444156.png">
-<meta property="og:image" content="http://yoursite.com/.com//20130903205901156.png">
-<meta property="og:updated_time" content="2021-03-24T06:12:06.123Z">
+<meta property="og:image" content="http://yoursite.com/2021/03/24/database_summary/20130903203749812.png">
+<meta property="og:image" content="http://yoursite.com/2021/03/24/database_summary/20130903204444156.png">
+<meta property="og:image" content="http://yoursite.com/2021/03/24/database_summary/20130903205901156.png">
+<meta property="og:updated_time" content="2021-03-24T06:53:32.979Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库基础知识回顾">
 <meta name="twitter:description" content="前言许久没有打开的博客了，最近应该会开始慢慢记录些东西吧，现在是基础知识回顾阶段。知识内容是在CSDN博客上找的，具体是哪儿忘记了。">
-<meta name="twitter:image" content="http://yoursite.com/.com//20130903203749812.png">
+<meta name="twitter:image" content="http://yoursite.com/2021/03/24/database_summary/20130903203749812.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -177,7 +177,7 @@
 <p>​        DOM —— 属性向域的映象集合</p>
 <p>​        F —— 属性间的数据依赖关系集合</p>
 <p> 4.笛卡尔乘积，选择和投影运算如下</p>
-<p><img src="/2021/03/24/database_summary/20130903203749812.png" alt="20130903203749812"></p>
+<p><img src="/2021/03/24/database_summary/20130903203749812.png" alt=""></p>
 <p>第三节</p>
 <h6 id="一、相关概念-2"><a href="#一、相关概念-2" class="headerlink" title="一、相关概念"></a>一、相关概念</h6><ol>
 <li><p>SQL：结构化查询语言的简称， 是关系数据库的标准语言。SQL 是一种通用的、 功能极强的关系数据库语言， 是对关系数据存取的标准接口， 也是不同数据库系统之间互操作的基础。集数据查询、数据操作、数据定义、和数据控制功能于一体。</p>
@@ -193,7 +193,7 @@
 <li>RDBMS 中索引一般采用 B+树或 HASH 来实现。</li>
 <li>索引可以分为唯一索引、非唯一索引和聚簇索引三种类型。</li>
 </ol>
-<p><img src="/.com//20130903204444156.png" alt="20130903204444156"></p>
+<p><img src="/2021/03/24/database_summary/20130903204444156.png" alt=""></p>
 <p>   6.SQL 创建表语句的一般格式为</p>
 <p>​          CREATE TABLE &lt;表名&gt;</p>
 <p>​          ( &lt;列名&gt; &lt;数据类型&gt;[ &lt;列级完整性约束&gt; ]</p>
@@ -232,7 +232,7 @@
 <li>常用存取控制方法包括自主存取控制(DAC)和强制存取控制(MAC)两种。</li>
 <li>自主存取控制(DAC)的 SQL 语句包括 GRANT 和 REVOKE 两个。 用户权限由数据对象和操作类型两部分构成。</li>
 </ol>
-<p><img src="/.com//20130903205901156.png" alt="20130903205901156"></p>
+<p><img src="/2021/03/24/database_summary/20130903205901156.png" alt=""></p>
 <ol start="6">
 <li><p>常见SQL 自主权限控制命令和例子。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">1) 把对 Student 和 Course 表的全部权限授予所有用户。</span><br><span class="line">     GRANT ALL PRIVILIGES ON TABLE Student，Course TO PUBLIC ；</span><br><span class="line">2) 把对 Student 表的查询权和姓名修改权授予用户 U4。</span><br><span class="line">     GRANT SELECT，UPDATE(Sname) ON TABLE Student TO U4 ；</span><br><span class="line">3) 把对 SC 表的插入权限授予 U5 用户，并允许他传播该权限。</span><br><span class="line">     GRANT INSERT ON TABLE SC TO U5 WITH GRANT OPTION ；</span><br><span class="line">4) 把用户 U5 对 SC 表的 INSERT 权限收回，同时收回被他传播出去的授权。</span><br><span class="line">     REVOKE INSERT ON TABLE SC FROM U5 CASCADE ；</span><br><span class="line">5) 创建一个角色 R1，并使其对 Student 表具有数据查询和更新权限。</span><br><span class="line">     CREATE ROLE R1；</span><br><span class="line">     GRANT SELECT，UPDATE ON TABLE Student TO R1；</span><br><span class="line">6) 对修改 Student 表结构的操作进行审计。</span><br><span class="line">     AUDIT ALTER ON Student ；</span><br></pre></td></tr></table></figure>
@@ -359,7 +359,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2021/03/24/database_summary/" data-id="ckmn1vjzj000368tb9mra9cms" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2021/03/24/database_summary/" data-id="ckmn5c1gh0003zgtbtnygu5q6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础知识回顾/">基础知识回顾</a></li></ul>
